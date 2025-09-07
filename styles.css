@@ -1,3 +1,71 @@
+/* Position the Charity Water logo at the bottom left */
+.cw-logo {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  width: 140px;
+  height: auto;
+  z-index: 11;
+}
+/* Style for logo in navigation pane */
+.nav-logo {
+  height: 18px;
+  width: auto;
+  margin-right: 18px;
+}
+h1 {
+  font-size: 3em;
+}
+/* Position the Charity Water logo at the bottom left */
+.cw-logo {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  width: 140px;
+  height: auto;
+  z-index: 10;
+}
+/* Simple navigation pane styles */
+nav {
+  background: #000; /* Black */
+  padding: 16px 24px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start; /* Logo stays left, links move right */
+}
+nav a {
+  /* Move all links to the right except the logo */
+  &:first-of-type {
+    margin-left: auto;
+  }
+  color: #fff; /* White */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #FFC907;
+}
+/* Add margin to headline and subheadline so they don't touch the screen edge */
+h1, body > p {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+/* Move the donate button down and to the right, and add margin so it doesn't touch the edge */
+.donate-button {
+  margin-top: 60px;
+  margin-left: 24px;
+  margin-right: 24px;
+  display: block;
+  width: fit-content;
+}
+/* Make the main heading and subheading text white */
+h1, body > p {
+  color: #fff;
+}
 /* charity: water Brand Colors & Fonts
 
 Primary Colors:
@@ -25,7 +93,14 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
+  /* Set a black background and add the background image */
+  background-color: #000;
+  background-image: url('https://cdn2.dropmarkusercontent.com/52043/7ae98bbb0d5a96ca35297379fee6e2dc240ed2dba200e517568b0b6985985974/preview/Madagascar_2019_CG-2726.jpg?Expires=1757257951&Signature=eGIwsaKVMYUacyG~8n1-qIabEY4e51neDoSX1lCnQxfyYae2J~JXhEUigbnrTa-fuzmQj9GD4wzGeXGBxsoUSg9V1YjQQryCrZUZ~7i0yZHcnILYdY7MDn3ph5olykWL9n0VthyinhCBgtPm5vY1ooktQt~7ubLKbaMOPsG9I96bPaDyQMKMtRJ4P5jGddKVjkoQwGjIWyZ3r0Sf7aDlkGlW4NYY1cIVtv4ogJ65SdCpZDxBe9UjPf1aTNWfC3tzQlsztKfipIexa0ZgkY8-libDX4-Ymw9z3IojXwfv9FTEbQedZLD~3Dzk1lARpKdoKs7Pdeh7ry6fW5b704bKGQ__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -60px;
+  justify-content: flex-start; /* Align all nav content to the left */
+  text-align: left;
   font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -45,7 +120,6 @@ section {
 .hero {
   position: relative; /* Needed for overlay */
   /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
@@ -109,17 +183,18 @@ h2 {
 }
 
 /* Donate Button Styles */
+
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
+  background-color: #FFC907; /* Yellow */
+  color: #222; /* Dark text for contrast */
   padding: 14px 32px;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
   font-size: 1.1em;
   margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
+  box-shadow: 0 2px 8px rgba(255, 201, 7, 0.10); /* Soft yellow shadow */
   transition: background 0.3s, transform 0.2s;
   border: none;
   cursor: pointer;
