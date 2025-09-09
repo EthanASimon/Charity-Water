@@ -110,6 +110,10 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
+  background-image: url('img/dirty-to-clean.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   /* Set a black background and add the background image */
   background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80'); /* Permanent Unsplash image */
   background-size: cover;
